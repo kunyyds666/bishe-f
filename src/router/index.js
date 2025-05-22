@@ -8,11 +8,11 @@ const router = createRouter({
       name: 'Login',
       component: () => import("@/views/Login.vue")
     },
-    {
-      path: '/qqlogincallback',
-      name: 'qq登录回调',
-      component: () => import("@/views/QqLoginCallback.vue")
-    },
+    // {
+    //   path: '/qqlogincallback',
+    //   name: 'qq登录回调',
+    //   component: () => import("@/views/QqLoginCallback.vue")
+    // },
     {
       path: '/',
       name: 'Framework',
@@ -95,6 +95,15 @@ router.beforeEach((to, from, next) => {
   const userInfo = VueCookies.get("userInfo")
   if (to.meta.needLogin != null && to.meta.needLogin && userInfo == null) {
     router.push("/login");
+    return;
+  }
+  
+  // 管理员只能访问设置页面
+  if (userInfo && userInfo.admin) {
+    if (!to.path.startsWith('/settings')) {
+      router.push("/settings/sysSetting");
+      return;
+    }
   }
   next();
 })

@@ -3,7 +3,7 @@
       <div class="header">
         <div class="logo">
             <span class="iconfont icon-pan"></span>
-            <div class="name">Easy云盘</div>
+            <div class="name">网盘</div>
         </div>
         <div class="right-panel">
             <el-popover
@@ -57,7 +57,7 @@
             <div class="menu-list">
                 <template v-for="item in menus">
                 <div
-                v-if="item.allShow || (!item.allShow && userInfo.admin)"
+                v-if="(!userInfo.admin && item.allShow) || (userInfo.admin && item.menuCode === 'settings')"
                 @click="jump(item)"
                 :class="[
                     'menu-item',
@@ -84,7 +84,7 @@
               <div class="tips" v-if="currentMenu && currentMenu.tips">
                 {{ currentMenu.tips }}
               </div>
-              <div class="space-info">
+              <div class="space-info" v-if="!userInfo.admin">
                 <div>空间使用</div>
                 <div class="percent">
                     <el-progress
@@ -93,7 +93,7 @@
                             (useSpaceInfo.useSpace / useSpaceInfo.totalSpace) * 10000
                         ) / 100
                       "
-                      color="#f701ff"
+                      color="#4424d2"
                     ></el-progress>
                 </div>
                 <div class="space-use">
@@ -353,13 +353,13 @@ getUseSpace();
         align-items: center;
         .icon-pan {
             font-size: 40px;
-            color: #f701ff;
+            color: #4424d2;
         }
         .name {
             font-weight: bold;
             margin-left: 5px;
             font-size: 25px;
-            color: #f701ff;
+            color: #4424d2;
             letter-spacing: 1px;
             animation-name: glitched;
             animation-duration: calc(.9s * 3.4);
@@ -390,7 +390,7 @@ getUseSpace();
                 margin: 0px 5px 0px 15px;
             }
             .nick-name {
-                color: #f701ff;
+                color: #4424d2;
                 animation-name: glitched;
                 animation-duration: calc(.9s * 3.4);
                 animation-iteration-count: infinite;
@@ -433,10 +433,10 @@ getUseSpace();
             }
             .active {
                 .iconfont {
-                    color: #f701ff;
+                    color: #4424d2;
                 }
                 .text {
-                    color: #f701ff;
+                    color: #4424d2;
                 }
             }
         }
@@ -463,10 +463,10 @@ getUseSpace();
             .active {
                 background: #eef9fe;
                 .iconfont {
-                    color: #f701ff;
+                    color: #4424d2;
                 }
                 .text {
-                    color: #f701ff;
+                    color: #4424d2;
                 }
             }
 
@@ -495,7 +495,7 @@ getUseSpace();
                     .iconfont {
                         cursor: pointer;
                         margin-right: 20px;
-                        color: #f701ff;
+                        color: #4424d2;
                     }
                 }
             }

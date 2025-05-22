@@ -189,11 +189,11 @@ watch(
         font-weight: bold;
     }
     .link {
-        color: #f701ff;
+        color: #4424d2;
         cursor: pointer;
     }
     .icon-right {
-        color: #f701ff;
+        color: #4424d2;
         padding: 0px 5px;
         font-size: 13px;
     }

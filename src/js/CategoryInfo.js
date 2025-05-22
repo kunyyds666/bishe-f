@@ -9,7 +9,7 @@ export default {
         accept: ".mp3,.wav,.wma,.mp2,.flac,.midi,.ra,.ape,.aac,.cda"
     },
     "image": {
-        accept: ".jpeg,.jpg,.png,.gif,.bmp,.dds,.psd,.pdt,.webp,.xmp,.svg,.tiff"
+        accept: ".jpeg,.jpg,.png,.PNG,.gif,.bmp,.dds,.psd,.pdt,.webp,.xmp,.svg,.tiff"
     },
     "doc": {
         accept: ".pdf,.doc,.docx,.xls,.xlsx,.txt"

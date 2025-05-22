@@ -108,7 +108,7 @@ const saveSettings = async () => {
     .save-btn {
         width: 50%;
         margin:0 auto;
-        background: linear-gradient(45deg, transparent 5%, #f701ff 5%);
+        background: linear-gradient(45deg, transparent 5%, #4424d2 5%);
         border: 0;
         color: #fff;
         letter-spacing: 3px;

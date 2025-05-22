@@ -9,7 +9,7 @@
                 ref="formDataRef"
                 @submit.prevent
             >
-            <div class="login-title">Easy云盘</div>
+            <div class="login-title">网盘</div>
             <!-- input输入 -->
             <el-form-item prop="email" >
                 <el-input
@@ -55,7 +55,7 @@
                         获取验证码
                     </el-button>
                     </div>
-                    <el-popover placement="left" :width="500" trigger="click">
+                    <!-- <el-popover placement="left" :width="500" trigger="click">
                         <div>
                             <p>1.在垃圾箱中查找邮箱验证码</p>
                             <p>2.在邮箱中头像->设置->反垃圾->白名单->设置邮件地址白名单</p>
@@ -65,7 +65,7 @@
                             <span class="a-link" :style="{ 'font-size': '14px' }"
                             >未收到邮箱验证码?</span>
                         </template>
-                    </el-popover>
+                    </el-popover> -->
                 </el-form-item>
                 <!-- 昵称 -->
                 <el-form-item prop="nickName" v-if="opType == 0">
@@ -159,9 +159,9 @@
                     <span v-if="opType == 2">重置密码</span>
                 </el-button>
             </el-form-item>
-            <div class="login-btn-qq" v-if="opType == 1">
+            <!-- <div class="login-btn-qq" v-if="opType == 1">
                 快捷登录<img src="@/assets/qq.png" @click="qqLogin" />
-            </div>
+            </div> -->
           </el-form>
         </div>
         <Dialog
@@ -481,7 +481,7 @@ const qqLogin = async () => {
                 justify-content: space-between;
                 .send-mail-btn {
                     margin-left: 5px;
-                    background: linear-gradient(45deg, transparent 5%, #f701ff 5%);
+                    background: linear-gradient(45deg, transparent 5%, #4424d2 5%);
                     border: 0;
                     letter-spacing: 1px;
                     line-height: 44px;
@@ -500,7 +500,7 @@ const qqLogin = async () => {
             }
             .op-btn {
                 width: 100%;
-                background: linear-gradient(45deg, transparent 5%, #f701ff 5%);
+                background: linear-gradient(45deg, transparent 5%, #4424d2 5%);
                 border: 0;
                 color: #fff;
                 letter-spacing: 3px;

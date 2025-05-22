@@ -93,7 +93,7 @@ const close = () => {
         padding: 5px 20px;
     }
     .dialog-buttons{
-        background: linear-gradient(45deg, transparent 5%, #f701ff 5%);
+        background: linear-gradient(45deg, transparent 5%, #4424d2 5%);
         border: 0;
         color: #fff;
         letter-spacing: 1px;

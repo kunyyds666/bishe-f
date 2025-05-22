@@ -25,7 +25,7 @@ const initPlayer = () => {
         theme: "#b7daff",
         screenshot: true,
         video: {
-            url: `/api/${props.url}`,
+            url: `/api${props.url}`,
             type: "customHls",
             customType: {
                 customHls: function(video, player) {

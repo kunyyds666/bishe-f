@@ -79,7 +79,7 @@ const uploadImage = async (file) => {
         }
         .op {
             position: absolute;
-            color: #f701ff;
+            color: #4424d2;
             top: 80px;
         }
     }
